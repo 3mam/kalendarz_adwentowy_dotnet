@@ -1,10 +1,10 @@
 ﻿
 var getRest = (int val) => (
     rest100: val/100,
-    rest25: val%100/25,
-    rest10: val%100%25/10,
-    rest5: val%100%25%10/5,
-    rest1: val%100%25%10%5
+    rest25:  val%100/25,
+    rest10:  val%100%25/10,
+    rest5:   val%100%25%10/5,
+    rest1:   val%100%25%10%5
 );
 
 
