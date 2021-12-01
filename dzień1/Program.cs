@@ -1,22 +1,12 @@
 ﻿
-var getRest = (int val) =>
-{
-  var val100 = (val / 100) * 100;
-  var val10 = Math.Abs(val100 - ((val / 10) * 10));
-  var val1 = Math.Abs(val - val100 - val10);
-  var rest100 = val100 / 100;
-  var rest25 = val10 / 25;
-  var rest10 = val10 % 25 / 10;
-  var rest5 = val1 / 5;
-  var rest1 = val1 % 5;
-  return (
-    rest100: rest100,
-    rest25: rest25,
-    rest10: rest10,
-    rest5: rest5,
-    rest1: rest1
-    );
-};
+var getRest = (int val) => (
+    rest100: val/100,
+    rest25: val%100/25,
+    rest10: val%100%25/10,
+    rest5: val%100%25%10/5,
+    rest1: val%100%25%10%5
+);
+
 
 var val = Int32.Parse(args[0]);
 var rest = getRest(val);
