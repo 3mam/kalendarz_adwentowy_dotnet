@@ -8,7 +8,7 @@ var getRest = (int val) =>
   var rest25 = val10 / 25;
   var rest10 = val10 % 25 / 10;
   var rest5 = val1 / 5;
-  var rest1 = val1 % 5 / 1;
+  var rest1 = val1 % 5;
   return (
     rest100: rest100,
     rest25: rest25,
