@@ -17,9 +17,13 @@ Dla prostoty załóż wykorzystanie języka angielskiego.
 Oryginalny tekst:
 Ala ma kota
 Zaszyfrowany tekst:
-Grg sg quzg
+Mxm ym wafm
+Odszyfrowany tekst:
+Ala ma kota
 ```
 
 ## Objaśnienie
 Na krótkie objaśnienie zasługuje użyty algorytm który dba o to aby podana wartość nie przekraczała zakresu liczb.
 Każdy znak ASCII ma przydzieloną liczbę. I tak litery duże są w przedziale od 65 do 90. Zaś małe w przedziale od 97 do 122. Także małe i duże litery mają po 26 znaków.
+Aby rozszyfrować zakodowaną wiadomość kluczowe było użycie operatora modulo z **Pytona**.
+Ponieważ w **Pytonie** operator działa nieco inaczej co w tym przypadku było bardzo potrzebne.
