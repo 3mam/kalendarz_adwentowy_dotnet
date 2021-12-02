@@ -26,7 +26,7 @@ var encodeText = encoding(shift, text);
 var decodeText = decoding(shift, encodeText);
 Console.Write($@"
 Oryginalny tekst:
-{args[1]}
+{text}
 Zaszyfrowany tekst:
 {encodeText}
 Odszyfrowany tekst:
