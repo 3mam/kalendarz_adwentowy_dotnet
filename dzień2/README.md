@@ -11,13 +11,13 @@ Dla prostoty załóż wykorzystanie języka angielskiego.
 > dotnet run -- wartość "tekst"
 
 ## Przykład 
-> dotnet run -- 6 "ala"
+> dotnet run -- 6 "Ala ma kota"  
 
 ```
 Oryginalny tekst:
-ala
+Ala ma kota
 Zaszyfrowany tekst:
-grg
+Grg sg quzg
 ```
 
 ## Objaśnienie
