@@ -11,7 +11,7 @@ Dla prostoty załóż wykorzystanie języka angielskiego.
 > dotnet run -- wartość tekst
 
 ## Przykład 
-> dotnet run -- 6 ala
+> dotnet run -- 6 "ala"
 
 ```
 Oryginalny tekst:
