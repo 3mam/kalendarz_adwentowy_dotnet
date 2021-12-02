@@ -8,7 +8,7 @@ nie przesuwaj.
 Dla prostoty załóż wykorzystanie języka angielskiego.
 
 ## Uruchomienie
-> dotnet run -- wartość tekst
+> dotnet run -- wartość "tekst"
 
 ## Przykład 
 > dotnet run -- 6 "ala"
