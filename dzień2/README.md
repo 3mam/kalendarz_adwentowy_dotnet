@@ -17,7 +17,7 @@ Dla prostoty załóż wykorzystanie języka angielskiego.
 Oryginalny tekst:
 Ala ma kota
 Zaszyfrowany tekst:
-Mxm ym wafm
+Grg sg quzg
 Odszyfrowany tekst:
 Ala ma kota
 ```
