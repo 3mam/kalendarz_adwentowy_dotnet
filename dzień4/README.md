@@ -9,6 +9,8 @@ Napisz aplikację, która odczyta ten plik, pozwoli na zwrócenie dowolnego wier
 > dotnet run
 
 ## Przykład 
+> dotnet run
+
 ```
          Witaj Mikołaju!
 Obecnie na liście jest 100 dzieci.
