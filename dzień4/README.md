@@ -35,5 +35,5 @@ dowolny klawisz zakończ
 Do widzenia
 ```
 ## Objaśnienie
-Do wygenerowania danych osobowych użyłem Pytona i biblioteki mimesis.
+Do wygenerowania danych osobowych użyłem Pytona i bibliotekę mimesis.
 Dzięki czemu mogłem w łatwy sposób stworzyć plik **csv** który zawiera 100 osób.
