@@ -1,17 +1,4 @@
-﻿var csv = File.ReadAllText("lista_prezentów.csv");
-var items = csv.Split('\n')
-.Where((v, i) => v != "" && i > 0)
-.Select(v => v.Split(','))
-.Select(v => new Items()
-{
-  FirstName = v[0],
-  LastName = v[1],
-  Age = Int32.Parse(v[2]),
-  Gift = v[3],
-})
-.ToArray();
-
-var getNumber = () =>
+﻿var getNumber = () =>
 {
   Console.WriteLine("\rPodaj numer aby uzyskać informacje o dziecku:");
   var key = Console.ReadLine() ?? default!;
@@ -51,6 +38,19 @@ var optionsSelect = () =>
     default: return Options.Quit;
   }
 };
+
+var csv = File.ReadAllText("lista_prezentów.csv");
+var items = csv.Split('\n')
+.Where((v, i) => v != "" && i > 0)
+.Select(v => v.Split(','))
+.Select(v => new Items()
+{
+  FirstName = v[0],
+  LastName = v[1],
+  Age = Int32.Parse(v[2]),
+  Gift = v[3],
+})
+.ToArray();
 
 Console.Write($@"
 {'\t'} Witaj Mikołaju!
