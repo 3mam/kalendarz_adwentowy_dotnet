@@ -8,4 +8,4 @@ Tematyka dowolna... Zaskocz Mikołaja :)
 > dotnet run
 
 ## Wyjaśnienie
-Niestety Minimal API jest dla mnie nowym tematem. Co spowodowało że sporo czasu mi zajęło żeby dodać 1 encje która używa 3 HTTP Verbs. Na resztę już zabrakło mi czasu który chciałem na to zadanie poświęcić.
+Niestety Minimal API jest dla mnie nowym tematem. Co spowodowało że sporo czasu mi zajęło żeby dodać 2 endpoint'y które łącznie używają 4 HTTP Verbs. Na resztę już zabrakło mi czasu który chciałem na to zadanie poświęcić.
