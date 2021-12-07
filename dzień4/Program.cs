@@ -12,7 +12,7 @@
   }
 };
 
-var selectItem = (Items[] items) =>
+var selectItem = (Person[] items) =>
 {
   while (true)
   {
