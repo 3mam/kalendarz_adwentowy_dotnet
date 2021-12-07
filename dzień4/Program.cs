@@ -43,7 +43,7 @@ var csv = File.ReadAllText("lista_prezentów.csv");
 var items = csv.Split('\n')
 .Where((v, i) => v != "" && i > 0)
 .Select(v => v.Split(','))
-.Select(v => new Items(
+.Select(v => new Person(
   FirstName: v[0],
   LastName: v[1],
   Age: Int32.Parse(v[2]),

@@ -1,4 +1,4 @@
-record Items(string FirstName, string LastName, int Age, string Gift)
+record Person(string FirstName, string LastName, int Age, string Gift)
 {
   public override string ToString() => @$"
 Imię: {FirstName} 
