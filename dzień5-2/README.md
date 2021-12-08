@@ -9,4 +9,4 @@ Tematyka dowolna... Zaskocz Mikołaja :)
 
 ## Wyjaśnienie
 Poprzednie podejście sprawiło mi sporo problemu. Po przez pomyłkę stworzyłem minimalny projekt dla WebAPI, a powinienem stworzyć projekt MVC.
-Zaimplementowałem taką samą funkcjonalność. Tylko z tą różnicą że ograniczyłem się do jednego kontrolera. 
+Zaimplementowałem taką samą funkcjonalność. Mimo że poszło tym razem o wiele sprawniej, to i tak ograniczyłem się do jednego kontrolera.
