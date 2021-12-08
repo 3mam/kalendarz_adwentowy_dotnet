@@ -1,0 +1,17 @@
+@{
+
+}
+
+<div style="font-size: 1.5rem;" class="text-center">
+  Panie, czy życzysz dodać nową wieś do swych włości?<br>
+  <form action="/village/" method="post">
+  <label>Nazwa wsi</label>
+    <input type="text" id="name" name="name" required="required" pattern="[A-Za-z0-9]{1,20}"><br>
+    <label>Liczebność mieszkańców</label>
+    <input type="number" id="people" name="people" required="required"><br>
+    <input type="submit" value="dodaj">
+  </form>
+  <form action="/">
+    <input type="submit" value="wróć">
+  </form>
+</div>

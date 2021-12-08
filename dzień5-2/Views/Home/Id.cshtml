@@ -1,0 +1,26 @@
+﻿@{
+    var id = (int?)ViewData["Id"] ?? default!;
+    var village = @VillagesModel.Village(id);
+}
+
+<div style="font-size: 1.3rem;" class="text-center">
+    <h1>Wieś @village.Name</h1>
+    <br>
+    Liczba mieszkańców <b>@village.People</b>
+    <br>
+    <br>
+    Co rozkażesz Panie?
+
+    <form action="/village/@id" method="post">
+        <input type="submit" value="usuń">
+    </form>
+    <form action="/village/@id/name">
+      <input type="submit" value="zmień nazwę">
+  </form>
+      <form action="/village/@id/peoplemvc">
+      <input type="submit" value="zmień liczebność populacji">
+  </form>
+  <form action="/">
+    <input type="submit" value="wróć">
+  </form>
+</div>

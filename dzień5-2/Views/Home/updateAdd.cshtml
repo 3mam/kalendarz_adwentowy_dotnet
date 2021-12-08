@@ -1,0 +1,13 @@
+@{
+  var name = ViewData["Name"]?.ToString() ?? default!;
+  var people = (int?)ViewData["People"] ?? default!;
+  VillagesModel.Add(new Village(name, people));
+}
+
+<div style="font-size: 1.5rem;" class="text-center">
+  Panie, wieś <b>@name</b> została dodana do twych włości.
+  <br>I liczy <b>@people</b> mieszkańców.
+  <form action="/">
+    <input type="submit" value="wróć">
+  </form>
+</div>

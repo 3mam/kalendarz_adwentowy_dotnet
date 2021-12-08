@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Zarządca";
+    var villages = @VillagesModel.List();
+}
+
+<div class="text-center">
+    <h1 style="font-size: 2rem;">Witaj Panie na swych włościach!</h1>
+    @for (var i=0; i<villages.Count();i++)
+    {
+        var village = villages[i];
+        {<a style="font-size: 1.5rem;" href="/village/@i">@village.Name</a><br>}
+    }
+</div>

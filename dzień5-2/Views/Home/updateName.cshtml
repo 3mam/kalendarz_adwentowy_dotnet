@@ -1,0 +1,13 @@
+@{
+  var id = (int?)ViewData["Id"] ?? default!;
+  var village = VillagesModel.Village(id);
+  var name = ViewData["Name"]?.ToString() ?? default!;
+  VillagesModel.Replace(id, new Village(name, village.People));
+}
+
+<div style="font-size: 1.5rem;" class="text-center">
+  Panie, wieś <b>@village.Name</b> teraz nazywa się <b>@name</b>
+  <form action="/village/@id">
+    <input type="submit" value="wróć">
+  </form>
+</div>
