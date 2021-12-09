@@ -17,12 +17,12 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 
-var vilages = new List<Vilage>();
-vilages.Add(new Vilage(name: "Biały Sad", people: 20));
-vilages.Add(new Vilage(name: "Podgaje", people: 25));
-vilages.Add(new Vilage(name: "Zalipie", people: 40));
-vilages.Add(new Vilage(name: "Poróg", people: 10));
-vilages.Add(new Vilage(name: "Jawornik", people: 30));
+var villages = new List<Village>();
+villages.Add(new Village(name: "Biały Sad", people: 20));
+villages.Add(new Village(name: "Podgaje", people: 25));
+villages.Add(new Village(name: "Zalipie", people: 40));
+villages.Add(new Village(name: "Poróg", people: 10));
+villages.Add(new Village(name: "Jawornik", people: 30));
 
 app.MapGet("/", async (context) =>
 {
@@ -33,11 +33,11 @@ app.MapGet("/", async (context) =>
         <center>
         Witaj Panie<br>
         O to twoje wsie.<br><br>
-            {vilages
+            {villages
             .Select((v, i) => (name: v.name, people: v.people, index: i))
             .Aggregate("", (acc, v) => @$"
             {acc}
-            <a href=""/vilages/{v.index}"">{v.name}</a><br>
+            <a href=""/villages/{v.index}"">{v.name}</a><br>
             ")}
             <br>
             <div id=""inp""><button id=""add"">dodaj wieś</button></div>
@@ -56,7 +56,7 @@ app.MapGet("/", async (context) =>
         let name = document.getElementById('name')
         let people = document.getElementById('people')
         send.onclick=()=>{{
-          fetch('/vilages/', {{
+          fetch('/villages/', {{
             method: 'POST',
             headers: {{
               'Content-Type': 'application/json',
@@ -74,15 +74,15 @@ app.MapGet("/", async (context) =>
   await context.Response.WriteAsync(html);
 });
 
-app.MapGet("/vilages/{id}", async (HttpContext context, int id) =>
+app.MapGet("/villages/{id}", async (HttpContext context, int id) =>
 {
-  var vilage = vilages[id];
+  var village = villages[id];
   var html = $@"
 <html>
     <head><meta charset=""UTF-8""></head>
     <body>
         <center>
-        Panie, wieś <b>{vilage.name}</b> ma <b>{vilage.people}</b> mieszkańców.
+        Panie, wieś <b>{village.name}</b> ma <b>{village.people}</b> mieszkańców.
         <br><br><button id=""del"">usuń</button>
         <button id=""ren"">zmień nazwę</button>
         <button id=""peo"">zmień liczbę mieszkańców</button>
@@ -95,7 +95,7 @@ app.MapGet("/vilages/{id}", async (HttpContext context, int id) =>
         let peo = document.getElementById('peo')
         let inp = document.getElementById('inp')
         del.onclick = ()=>{{
-          fetch('/vilages/{id}', {{method: 'DELETE'}})
+          fetch('/villages/{id}', {{method: 'DELETE'}})
           .then(response => response.text())
           .then(text => document.body.innerHTML = text)
         }}
@@ -104,13 +104,13 @@ app.MapGet("/vilages/{id}", async (HttpContext context, int id) =>
           let renIn = document.getElementById('renIn')
           let send = document.getElementById('send')
           send.onclick = ()=>{{
-            fetch('/vilages/{id}', {{
+            fetch('/villages/{id}', {{
               method: 'PUT',
               headers: {{
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
                 }},
-              body: `{{""name"":""${{renIn.value}}"", ""people"":{vilage.people}}}`,
+              body: `{{""name"":""${{renIn.value}}"", ""people"":{village.people}}}`,
               }})
             location.reload()
           }}
@@ -120,13 +120,13 @@ app.MapGet("/vilages/{id}", async (HttpContext context, int id) =>
           let renIn = document.getElementById('renIn')
           let send = document.getElementById('send')
           send.onclick = ()=>{{
-            fetch('/vilages/{id}', {{
+            fetch('/villages/{id}', {{
               method: 'PUT',
               headers: {{
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
                 }},
-              body: `{{""name"":""{vilage.name}"", ""people"":${{renIn.value}}}}`,
+              body: `{{""name"":""{village.name}"", ""people"":${{renIn.value}}}}`,
               }})
             location.reload()
           }}
@@ -138,12 +138,12 @@ app.MapGet("/vilages/{id}", async (HttpContext context, int id) =>
   await context.Response.WriteAsync(html);
 });
 
-app.MapPost("/vilages/", async (HttpContext context, Vilage vilage) =>
+app.MapPost("/villages/", async (HttpContext context, Village vilage) =>
 {
-  var exist = vilages.Where(v => v.name == vilage.name);
+  var exist = villages.Where(v => v.name == vilage.name);
   if (exist.Count() == 0)
   {
-    vilages.Add(vilage);
+    villages.Add(vilage);
     await context.Response.WriteAsync(@$"
     <center>
     Panie, wieś <b>{vilage.name}</b> została dodana!<br>
@@ -160,11 +160,11 @@ app.MapPost("/vilages/", async (HttpContext context, Vilage vilage) =>
     </center>
   ");
 });
-app.MapPut("/vilages/{id}", (int id, Vilage vilage) => vilages[id] = vilage);
-app.MapDelete("/vilages/{id}", async (HttpContext context, int id) =>
+app.MapPut("/villages/{id}", (int id, Village vilage) => villages[id] = vilage);
+app.MapDelete("/villages/{id}", async (HttpContext context, int id) =>
 {
-  var vilage = vilages[id];
-  vilages.Remove(vilage);
+  var vilage = villages[id];
+  villages.Remove(vilage);
   var html = $@"
 <center>
   Panie, wieś <b>{vilage.name}</b> została usunięta zgodnie z twoją wolą!
@@ -177,4 +177,4 @@ app.MapDelete("/vilages/{id}", async (HttpContext context, int id) =>
 
 app.Run();
 
-record Vilage(string name, int people);
+record Village(string name, int people);
