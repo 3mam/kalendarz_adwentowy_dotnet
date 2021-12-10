@@ -10,7 +10,7 @@ Różnice są takie że interfejsy nie są klasą.
 Mimo że można umieszczać implementacje metod. Co mozę kojarzyć się z klasą abstrakcyjną.
 
 Interfejs to typ referencyjny który potrafi wchodzić w interakcje z innymi typami, takimi jak **class**, **record** i **struct**.
-Każdy z wymienionych typów jeżeli używa interfejsów, musi mieć zaimplementowane metody i wartości zgodne z interfejsem. Jednakże może zdarzyć się tak że kilka użytych interfejsów może mieć zbiór takich samych metod i wartości.
+Każdy z wymienionych typów jeżeli używa interfejsów, musi mieć zaimplementowane metody i właściwości zgodne z interfejsem. Jednakże może zdarzyć się tak że kilka użytych interfejsów może mieć zbiór takich samych metod i właściwości.
 W takim przypadku **C#** pozwala na definiowanie w typach dla każdego interfejsu osobnej implementacji.
 Najlepiej zobrazuje to przykład:
 ```c#
