@@ -39,3 +39,7 @@ class Foo : IFoo1, IFoo2
 }
 ```
 Trzy implementacje metody o tej samej nazwie ale w zależności od kontekstu inny efekt.
+
+Co się tyczy klasy abstrakcyjnej.
+Posiada takie same właściwości co zwykła klasa. Jednakże nie może zostać użyta bezpośrednio. A jedynie po przez klasę która dziedziczy.
+Klasa abstrakcyjna jest używana jako fundament pod przyszłe klasy. I oczekuje że klasa która będzie dziedziczyć uzupełni wymagane metody o własne implementacje. Ewentualnie pozwoli zastąpić już istniejące.
