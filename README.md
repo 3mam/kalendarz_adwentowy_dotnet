@@ -9,3 +9,4 @@ Grudzień 2021|
 [Dzień 5](dzień5/)|
 [Dzień 5-2](dzień5-2/)|
 [Dzień 6](dzień6/)|
+[Dzień 7](dzień7/)|
