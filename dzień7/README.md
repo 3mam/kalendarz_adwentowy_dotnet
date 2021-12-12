@@ -11,7 +11,7 @@ for (int i = 0; i < n; i++)
 Napisz, jaka jest złożoność obliczeniowa tego fragmentu kodu (według notacji Wielkiego O) i wytłumacz dlaczego.
 
 ## Odpowiedź
-Niestety mój mózg się podał przy próbuje zgłębienia czym jest notacja Wielkiego O.   
+Niestety mój mózg się podał przy próbuje zgłębienia czym jest notacja Dużego O.   
 
 ## Rozwiązanie
 Złożoność tego krótkiego fragmentu kodu to O(n^2), ponieważ całość kodu wykona się przechodząc przez n wywołań zewnętrznej pętli, oraz n wywołań wewnętrznej pętli.
